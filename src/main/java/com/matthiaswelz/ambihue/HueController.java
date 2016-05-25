@@ -76,7 +76,7 @@ public class HueController implements AutoCloseable {
 			
 			@Override
 			public void onError(int code, String message) {
-				logger.warn("Hue error: " + message);
+				logger.debug("Hue error: " + message);
 			}
 			
 			@Override
