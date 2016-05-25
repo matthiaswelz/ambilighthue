@@ -6,7 +6,6 @@ import java.util.TimerTask;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.matthiaswelz.ambihue.Ambihue.Association;
 import com.matthiaswelz.ambihue.AmbilightReader.TVOffListenr;
 import com.matthiaswelz.ambihue.HueController.HueConnectedCallback;
 
@@ -88,7 +87,7 @@ public class StartProgram {
 		for (String mapping : parameters.mappings) {
 			logger.debug("Parsing mapping " + mapping);
 			
-			Association association = Association.parse(mapping);
+			HueAmbilightMapping association = HueAmbilightMapping.parse(mapping);
 			this.ambihue.addAssociation(association);
 			
 			logger.debug("Mapping added: " + association);
