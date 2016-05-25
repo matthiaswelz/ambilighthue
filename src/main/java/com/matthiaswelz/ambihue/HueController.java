@@ -219,10 +219,10 @@ public class HueController implements AutoCloseable {
 	public void close() throws Exception {
 		logger.info("close()");
 		
-		if (this.bridge != null)
+		if (this.bridge != null) {
+			hue.disableAllHeartbeat();
 			hue.disconnect(bridge);
-		
-		hue.disableAllHeartbeat();
+		}
 	}
 	
 	private PHLight findLight(String name) {
