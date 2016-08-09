@@ -126,10 +126,14 @@ public class HueController implements AutoCloseable {
 			@Override
 			public void onAccessPointsFound(List<PHAccessPoint> arg0) {
 				logger.info("Bridges found: " + arg0.size());
+				for(PHAccessPoint accessPoint : arg0) {
+					logger.info("* Bridge: " + accessPoint.getIpAddress());
+				}
 				
 				PHAccessPoint accessPoint = arg0.get(0);
 				
-				logger.debug("Connecting to bridge");
+				logger.debug("Connecting to bridge with IP: " + accessPoint.getBridgeId());
+				
 				hue.connect(accessPoint);
 			}
 		});	    
