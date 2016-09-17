@@ -81,7 +81,7 @@ public class HueController implements AutoCloseable {
 			
 			@Override
 			public void onConnectionResumed(PHBridge arg0) {
-				logger.debug("Hue connection resumed");
+				logger.trace("Hue connection resumed");
 			}
 			
 			@Override
