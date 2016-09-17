@@ -162,7 +162,7 @@ public class Ambihue {
 			this.data.set(data);
 			this.semaphore.release();
 		} else {
-			logger.debug("Read null value");
+			logger.trace("Read null value");
 		}
 		
 		if (this.running.get())

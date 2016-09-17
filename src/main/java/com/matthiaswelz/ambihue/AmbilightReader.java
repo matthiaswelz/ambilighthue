@@ -86,10 +86,11 @@ public final class AmbilightReader implements AutoCloseable {
 			return result;
 		} catch (Exception e) {	
 			logger.trace("Exception during webrequest", e);
+			logger.debug("Exception during webrequest");
 			
 			long currentMillis = System.currentTimeMillis();
 			if (firstFailedRequest == null) {
-				logger.trace("First failed request");
+				logger.debug("First failed request");
 				
 				firstFailedRequest = currentMillis;				
 			} else {
