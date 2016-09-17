@@ -19,7 +19,7 @@ public class Parameters {
 	public int ambilightTimeoutMS = 100;
 	@Option(name="-tvOffDelay", depends={"-start"},usage="Sets the time (in ms) after which the system should assume that the TV has been turned off")
 	public int tvOffDelay = 3000;
-	@Option(name = "-map", depends={"-start"}, handler=StringArrayOptionHandler.class, usage="Mappings between ambilight positions and light names. Syntax: [Light name]:[Ambilight Position][Ambilight Index]:[Brightness]")
+	@Option(name = "-map", depends={"-start"}, handler=StringArrayOptionHandler.class, usage="Mappings between ambilight positions and light names. Syntax: [Light name]:[Ambilight Position][Ambilight Index]:[Brightness] for simple or [Light name]:[Ambilights]:[Brightness] where Ambilights multiple of (separated by comma): [Weight][Ambilight Position][Ambilight Index]")
 	public List<String> mappings = new ArrayList<String>();
 	@Option(name="-tvCheckInterval", depends={"-start"},usage="Sets the interval (in ms) to check the TV after it has been turned off")
 	public int tvCheckIntervalMs = 5000;

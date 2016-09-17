@@ -37,8 +37,8 @@ public class Ambihue {
 		this.reader = ambilightReader;
 		
 		this.semaphore = new Semaphore(0);
-		this.data = new AtomicReference<AmbilightData>(null);
-		this.associations = new ArrayList<HueAmbilightMapping>();
+		this.data = new AtomicReference<>(null);
+		this.associations = new ArrayList<>();
 		this.running = new AtomicBoolean(false);
 		
 		this.ambilightReadTimer = new Timer(true);
